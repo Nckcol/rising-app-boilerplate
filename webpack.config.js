@@ -19,26 +19,29 @@ module.exports = {
             {
                 test: /\.ts/,
                 loader: "awesome-typescript-loader",
-                exclude: [
-                    root("node_modules")
-                ]
+                exclude: /node_modules/
             },
 
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-                include: [root('./src/styles')]
+                exclude: /node_modules/,
+                use: ['raw-loader']
             },
 
-            /*
-             * sass loader support for *.scss files (styles directory only)
-             * Loads external sass styles into the DOM, supports HMR
-             *
-             */
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
-                include: [root('./src/styles')]
+                exclude: /node_modules/,
+                use: [{
+                    loader: 'raw-loader'
+                }, {
+                    loader: 'sass-loader'
+                }]
+            },
+
+            {
+                test: /\.html$/,
+                exclude: /node_modules/,
+                use: ['raw-loader']
             }
         ]
     },

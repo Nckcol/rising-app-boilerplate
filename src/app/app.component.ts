@@ -1,26 +1,20 @@
-import { Component } from '@angular/core';
+import {Component, ViewEncapsulation} from "@angular/core";
 
-export class Hero {
+export class Human {
     id: number;
     name: string;
 }
 
 @Component({
-    selector: 'my-app',
-    template: `
-        <h1>{{title}}</h1>
-        <h2>{{hero.name}} details!</h2>
-        <div><label>id: </label>{{hero.id}}</div>
-        <div>
-            <label>name: </label>
-            <input [(ngModel)]="hero.name" placeholder="name">
-        </div>
-    `
+    selector: "my-app",
+    styles: [require("./app.styles.scss")],
+    template: require("./app.template.html"),
+    encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-    title = 'Tour of Heroes';
-    hero: Hero = {
+    title = "No way!!";
+    hero: Human = {
         id: 1,
-        name: 'Windstorm'
+        name: "Alice"
     };
 }
