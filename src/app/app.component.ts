@@ -11,6 +11,8 @@ export class Human {
     template: require("./app.template.html"),
     encapsulation: ViewEncapsulation.None
 })
+
+
 export class AppComponent {
     title = "No way!!";
     hero: Human = {
