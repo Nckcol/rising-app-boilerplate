@@ -22,7 +22,7 @@ export class RegistrationComponent {
     }
 
     private signIn() {
-        this.http.post('https://likeittrello.herokuapp.com/rest/login', JSON.stringify(this.user))
+        this.http.post('https://likeittrello.herokuapp.com/rest/habs-list', JSON.stringify(this.user))
             .map((res) => {JSON.parse(res.text())})
             .subscribe(
                 (res) => {},

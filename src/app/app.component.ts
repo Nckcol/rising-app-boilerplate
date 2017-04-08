@@ -1,9 +1,5 @@
 import {Component, ViewEncapsulation} from "@angular/core";
 
-export class Human {
-    id: number;
-    name: string;
-}
 
 @Component({
     selector: "my-app",
@@ -14,9 +10,5 @@ export class Human {
 
 
 export class AppComponent {
-    title = "No way!!";
-    hero: Human = {
-        id: 1,
-        name: "Alice"
-    };
+
 }
