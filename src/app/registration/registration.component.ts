@@ -9,7 +9,7 @@ export class User {
 }
 
 @Component({
-    selector: "auth",
+    selector: "registration",
     styles: [require("./registration.styles.scss")],
     template: require("./registration.template.html")
 })
